@@ -1,9 +1,9 @@
 # Algorithmic-Trading
 
-# 1. Introduction
+## Introduction
 This report implements two trading strategies and compares their performance. One strategy manually determine trades while the other technique uses machine learning in the form of a Random Forest classifier to determine trades. Both use the same market indicators: bollinger bands, golden crossings, and moving average convergence-divergence (MACD). The goal is to determine how a machine learning strategy may outperform the manual strategy with the ability to adapt to changes in the market. For the purposes of this report, we select an in-sample time period (1/1/2008-12/31/2009) to train on and an out-of-sample time period (1/1/2010-12/31/2011) to test on. The starting portfolio value is $100,000. The number of total long or short sells allowed at any given time must be within 1000 to -1000. Commission is $9.95 and impact is 0.05% unless otherwise stated. I hypothesize that the Random Forest classifier will improve the performance of the indicators’ predictions to optimize the portfolio return. I also hypothesize that as transaction fees increase, whether it be in the form of commission or impact, there will be a disruption in the overall performance of both trading strategies.
 
-# 2 INDICATOR OVERVIEW
+## 2 INDICATOR OVERVIEW
 ## 2.1 Bollinger Bands
 Bollinger Bands are used to indicate a buy and sell signal when using the simple moving average (SMA). The equations are shown below.
 〖SMA〗_t=(〖Price〗_t+〖Price〗_(t-1)+...+〖Price〗_(t-n))/n                                          (1)
@@ -22,37 +22,42 @@ Since the short term and long term EMA values have different time periods, the d
 
 ## Example with Apple Stock (AAPL)
 
-![figure1](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/9e2a3355-9373-4bc7-873a-6538fa7955a3)
+
 
 Figure 1
 
-![figure2](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/88d28aff-a090-4ba1-9ee0-64665476f1e9)
+![figure1](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/e3194f6b-112d-4d9d-8e9d-1b97f8e93bdb)
+
 
 Figure 2
 
-![table1](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/d919cd6f-2dee-4597-b14a-100c9ec13023)
+![figure2](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/31fdaa30-4ac0-4f4b-82c5-e8581bbae5c0)
+
 
 Table 1
 
-![figure3](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/e817a646-019a-4733-82fa-c8e16414bc24)
+![table1](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/c2668d66-2b99-46bb-91e7-557a7b8be960)
+
 
 Figure 3
 
-![figure4](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/972dc8d3-27bd-4d06-ad9b-453cc5d2a599)
+![figure3](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/a37a63fa-6f62-4f0e-8348-63276cd0e2c6)
+
 
 Figure 4
 
-![figure5](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/560cb513-4e96-4cd6-a4c9-71c9e840bf8d)
+![figure4](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/eed0b9dd-c939-49ef-aeb8-7763d95bee3d)
 
 Figure 5
 
-![figure6](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/3397cf71-2dab-4fba-a733-8ccc88afcd40)
+![figure5](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/e3f7b576-fc56-422f-b6e5-7e0d6ad1c794)
+
 
 Figure 6
 
-![table2](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/bb23d427-c79c-4bc5-a6db-45378589ecee)
+![figure6](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/e9c71d2d-ec19-4acc-9d37-f28d7e130002)
+
 
 Table 2
 
-
-
+![table2](https://github.com/macy-mora-antoinette/Algorithmic-Trading/assets/112992304/3cb6577b-629a-4aff-b631-4b516b98f8ac)
